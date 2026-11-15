@@ -1,10 +1,8 @@
-# 🔗 Encurtador de URL
+# Encurtador de URL
 
 Aplicação web que transforma links longos em códigos curtos (ex.: `http://127.0.0.1:5000/aB3x`), redireciona quem acessa o link curto e guarda o histórico de links e de cliques em um banco MySQL.
 
 Projeto de estudo desenvolvido para praticar back-end com Python, banco de dados relacional e integração com um front-end simples.
-
-<!-- Adicione aqui um print ou GIF do projeto funcionando, por exemplo: ![Demonstração](docs/demo.gif) -->
 
 ## Funcionalidades
 
@@ -33,27 +31,6 @@ Projeto de estudo desenvolvido para praticar back-end com Python, banco de dados
 4. Ao acessar `GET /<codigo>`, o servidor converte o código de volta em `id`, busca a URL original, incrementa o contador de cliques e responde com um redirecionamento `302`.
 
 O código não é guardado no banco: ele é recalculado a partir do `id` e do `salt` secreto.
-
-## Estrutura do projeto
-
-```
-encurtador-de-url/
-├── Back-end/
-│   ├── app.py            # rotas Flask
-│   ├── config.py         # leitura das variáveis de ambiente
-│   ├── db.py             # conexão com o MySQL
-│   ├── schema.sql        # criação do banco, da tabela e do usuário
-│   └── .env.example      # modelo das variáveis de ambiente
-├── Front-end/
-│   ├── template/
-│   │   └── index.html
-│   └── static/
-│       ├── css/          # input.css (fonte) e output.css (gerado pelo Tailwind)
-│       └── js/main.js
-├── package.json
-├── requirements.txt
-└── README.md
-```
 
 ## Pré-requisitos
 
@@ -173,4 +150,4 @@ curl -X POST http://127.0.0.1:5000/api/encurtar \
 
 Matheus Ribeiro Silva
 
-[LinkedIn](COLE-AQUI-O-LINK-DO-SEU-LINKEDIN) · [GitHub](https://github.com/SEU-USUARIO)
+[LinkedIn](www.linkedin.com/in/silva-ribeiro) · [GitHub](https://github.com/Ribeiro-Silva)
