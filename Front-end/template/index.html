@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de Url</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body class="bg-[#27232E] text-white flex">
+     <main class="flex items-center flex-col min-h-screen min-w-screen">
+        <h1 class="text-2xl p-5 font-bold">ENCURTADOR DE LINKS🔗</h1>
+        <div class="w-full flex justify-center items-center">
+            <input class=" p-2 border-2 rounded-xl border-gray-200 w-1/2 m-4" type="text" id="url" placeholder="Insira a URL">
+            <button id="btn" class=" bg-[#E113F0]/20 rounded-xl hover:cursor-pointer hover:bg-[#E113F0] hover:shadow-xl hover:shadow-[#D512E3]/25 h-10 w-25 p-3 flex justify-center items-center">Encurtar</button>
+        </div>
+        <p id="erro" class="underline mb-10 italic decoration-wavy text-red-600"></p>
+            
+        <dialog id="modal" class="m-auto rounded-xl bg-[#E0E0E0]/95 backdrop:bg-black/60">
+            <div class="flex flex-col items-center justify-center w-96 max-w-[90vw] h-96 px-4">
+                <h2 class="text-black text-xl font-bold">Link Encurtado</h2>
+                <a id="link" target="_blank" class="text-[#E113F0] text-2xl m-3 break-all text-center hover:underline font-semibold"></a>
+                <div>
+                    <button id="copiar" class="rounded-xl bg-green-500 w-30 h-10  px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline mr-2">Copiar</button>
+                    <button id="fechar" class="rounded-xl bg-red-500 w-30 h-10 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline ml-2">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+        
+        <div id="canvaHistorico" class="flex flex-col min-h-screen justify-start w-3/4">
+            <h2 class="text-center text-xl font-extrabold m-3">HISTÓRICO</h2>
+            <div>
+                <table class="border border-gray-200 shadow-xl/45 w-full">
+                    <thead>
+                        <tr class=" border border-gray-400">
+                            <th class="py-2 pr-4  border border-gray-200 w-1/2">Link encurtado</th>
+                            <th class="py-2 pr-4  border border-gray-200  w-1/4">Cliques</th>
+                            <th class="py-2 pr-4  border border-gray-200  w-1/4">Criado em</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historico"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
